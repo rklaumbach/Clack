@@ -1,5 +1,6 @@
 package com.example.clack
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun loginSignUpBtnClicked (view: View){
+        val createUserIntent = Intent(this, CreateUserActivity::class.java)
+        startActivity(createUserIntent)
 
     }
 }
