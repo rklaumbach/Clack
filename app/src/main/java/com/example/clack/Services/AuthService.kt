@@ -20,7 +20,8 @@ object AuthService {
         jsonBody.put("password", password)
         val requestBody = jsonBody.toString()
 
-        val registerRequest = object : StringRequest(Request.Method.POST, url, Response.Listener { _ ->
+        val registerRequest = object : StringRequest(Request.Method.POST, url, Response.Listener { response ->
+            println(response)
             complete(true)
         }, Response.ErrorListener {error ->
             Log.d("ERROR", "Could not register user: $error")
